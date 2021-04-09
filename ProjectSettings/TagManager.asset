@@ -9,6 +9,9 @@ TagManager:
   - spike
   - Enemy
   - Slippery
+  - R
+  - L
+  - Movingplatform
   layers:
   - Default
   - TransparentFX
@@ -19,8 +22,8 @@ TagManager:
   - Ground
   - danger
   - Slippery ground
-  - 
-  - 
+  - enemyBlock
+  - Player
   - 
   - 
   - 

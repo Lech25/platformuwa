@@ -26,4 +26,9 @@ public class Enemy : MonoBehaviour {
         Vector2 movement = new Vector2(direction * movementSpeed, rb.velocity.y);
         rb.velocity = movement;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "R") direction = -1;
+        if (collision.gameObject.tag == "L") direction = 1;
+    }
 }

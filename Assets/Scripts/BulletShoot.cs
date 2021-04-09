@@ -24,7 +24,7 @@ public class BulletShoot : MonoBehaviour
 
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.tag == "Ground") Destroy(this.gameObject);
+        if (collision.tag == "Ground" || collision.tag == "Slippery") Destroy(this.gameObject);
         if (collision.tag == "Enemy") {
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
