@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform sideL;
     public Transform sideR;
     public LayerMask groundLayers;
+    public LayerMask wallLayers;
 
     float mx;
     void Start()
@@ -53,8 +54,8 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
     public bool isWalled() {
-        Collider2D wallCheckL = Physics2D.OverlapCircle(sideL.position, 0.5f, groundLayers);
-        Collider2D wallCheckR = Physics2D.OverlapCircle(sideR.position, 0.5f, groundLayers);
+        Collider2D wallCheckL = Physics2D.OverlapCircle(sideL.position, 0.5f, wallLayers);
+        Collider2D wallCheckR = Physics2D.OverlapCircle(sideR.position, 0.5f, wallLayers);
 
         if ((wallCheckR != null || wallCheckL != null) && Input.GetAxisRaw("Horizontal") != 0) {
             jumpForce = startJumpForce * 1.2f;
@@ -63,9 +64,4 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.tag == "spike") {
-            Destroy(this.gameObject);
-        }
-    }
 }

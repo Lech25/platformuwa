@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 5331640736473451550}
   - component: {fileID: 5331640736473451551}
   - component: {fileID: 5331640736473451520}
+  - component: {fileID: 1562533996}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -186,6 +187,9 @@ MonoBehaviour:
   sideR: {fileID: 5331640736523167155}
   groundLayers:
     serializedVersion: 2
+    m_Bits: 320
+  wallLayers:
+    serializedVersion: 2
     m_Bits: 64
 --- !u!114 &5331640736473451520
 MonoBehaviour:
@@ -201,6 +205,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1030163324522509513, guid: 5f827e21d544a254aada230ece4800c2, type: 3}
   playerTransform: {fileID: 5331640736473451548}
+--- !u!114 &1562533996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331640736473451546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129b1df48da02a44aacb87cab931849f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneManager: {fileID: 0}
 --- !u!1 &5331640736523167152
 GameObject:
   m_ObjectHideFlags: 0

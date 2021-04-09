@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - spike
   - Enemy
+  - Slippery
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - Ground
   - danger
-  - 
+  - Slippery ground
   - 
   - 
   - 
@@ -42,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: finish
+    uniqueID: 3055715499
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

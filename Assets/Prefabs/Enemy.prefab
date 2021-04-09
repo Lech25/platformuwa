@@ -160,7 +160,7 @@ MonoBehaviour:
   sideL: {fileID: 2846309778218582863}
   groundLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
 --- !u!50 &2846309778295293493
 Rigidbody2D:
   serializedVersion: 4
