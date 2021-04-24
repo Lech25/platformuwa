@@ -23,8 +23,11 @@ public class Enemy : MonoBehaviour {
         } else if (groundCheckR == null) {
             direction = -1;
         }
-        Vector2 movement = new Vector2(direction * movementSpeed, rb.velocity.y);
-        rb.velocity = movement;
+       
+        if(direction == 1)
+            transform.position = new Vector2(transform.position.x + movementSpeed * Time.deltaTime, transform.position.y);
+        else if(direction == -1)
+            transform.position = new Vector2(transform.position.x - movementSpeed * Time.deltaTime, transform.position.y);
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
